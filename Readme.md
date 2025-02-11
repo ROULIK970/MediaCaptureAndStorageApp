@@ -1,0 +1,1 @@
+A full-stack web application using the MERN stack that allows users to upload, view, and manage media files (images & videos).
