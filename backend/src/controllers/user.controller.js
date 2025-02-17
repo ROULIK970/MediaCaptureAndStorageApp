@@ -53,6 +53,8 @@ const registerUser = asyncHandler(async (req, res) => {
   //upload avatar to cloudinary
   const avatar = await uploadOnCloudinary(avatarLocalPath);
 
+  console.log(avatar)
+
   //check if avatar file is uploaded to cloudinary
   if (!avatar) {
     throw new ApiError(400, "Avatar file is required");
@@ -142,6 +144,7 @@ const loginUser = asyncHandler(async (req, res) => {
 });
 
 const logoutUser = asyncHandler(async (req, res) => {
+  console.log(req.user)
   await User.findByIdAndUpdate(
     req.user._id,
     {

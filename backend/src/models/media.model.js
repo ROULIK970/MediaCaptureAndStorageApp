@@ -16,7 +16,7 @@ const mediaSchema = new Schema(
       enum: ["image", "video"],
       required: true,
     },
-    fileUrl: {
+    media: {
       type: String, //cloudinary url
       required: true,
     },
